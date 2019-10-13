@@ -1,0 +1,16 @@
+{
+  "name": "uthoob",
+  "version": "1.0.0",
+  "description": "youtube downloader using ytdl-core",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "akhand patel",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ytdl-core": "^1.0.0"
+  }
+}

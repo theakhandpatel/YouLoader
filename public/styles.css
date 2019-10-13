@@ -1,0 +1,56 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    margin: 200px auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+    border: 2px solid black ;
+}
+
+
+h2{
+    color: tomato;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+
+p{
+    color: sandybrown;
+    font-size: 14px;
+    font-style: italic;
+    margin-top:-30px;
+}
+
+input{
+    border: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 50px;
+}
+
+input:focus{
+    border: 3px solid lightseagreen;
+}
+button{
+    background-color: firebrick;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: block;
+    margin: 30px auto;
+}
+
+
