@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../public/stylesheets/styles.css">
     <title>Uthoob</title>
-    <script defer src="/action.js"></script>
 </head>
 <body>
     <div class="main">
         <h2>Uthoob</h2>
         <p>Your own youtube video downloader</p>
-        <input id="link" type="text" size="80" placeholder="Enter your youtube video Link Here">
-        <button id="send">Get Video</button>
+        <form action="/download" method="get"> 
+            <input id="link" name="URL" type="text" size="80" placeholder="Enter your youtube video Link Here">
+            <select name="quality">
+                <option value="720p">720</option>
+                <option value="360p">360</option>
+                <option value="480p">480</option>
+                <option value="144p">144</option>
+              </select>
+            <button type="submit" id="send">Get Video</button>
+        </form>
+        
+        
     </div>
 </body>
 </html>
