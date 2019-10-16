@@ -42,7 +42,42 @@ app.get('/download', (req,res) => {
             
         }
       });
+
 });  
+
+
+app.get("/video",(req,res)=>{
+    let url = req.query.URL;
+
+    ytdl.getBasicInfo(url, (err, info) => {
+        if (err) throw err;
+        let video_qualities = new Set();
+        let audio_qualities = new Set();
+
+        info.formats.forEach((format)=>{
+            
+            if(format.quality_label){
+                video_qualities.add(format.quality_label);
+            }
+
+            if(format.type.includes("audio")){
+                audio_qualities.add(format.type);
+            }
+        });
+
+
+        let data = {
+            video_id : info.video_id,
+            title : info.title,
+            durations : info.length_seconds,
+            video_qualities : Array.from(video_qualities),
+            audio_qualities : Array.from(audio_qualities),
+            formats : info.formats,
+        }
+        res.json(data);
+
+      });
+})
 
 app.listen(4000,() => {
     console.log('Server Works !!! At port 4000');
