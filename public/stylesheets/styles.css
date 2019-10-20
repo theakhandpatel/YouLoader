@@ -1,0 +1,9 @@
+.hiddenul li{
+    list-style: none;
+}
+
+.hiddenul a{
+    color: brown;
+    font-family: 'Bree Serif', serif;
+    font-size: 28px;
+}
